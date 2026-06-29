@@ -2,10 +2,8 @@ from setuptools import setup, Extension
 import pybind11
 import os
 
-# Cari path include OpenCV (Sesuaikan jika lu pakai Windows lokal, di Docker ini aman)
-# Asumsi di sistem/Docker, OpenCV header ada di /usr/include/opencv4
 opencv_include = "/usr/include/opencv4"
-opencv_libs = ["opencv_core", "opencv_imgproc"]
+opencv_libs = ["opencv_core", "opencv_imgproc", "opencv_photo"]
 
 ext_modules = [
     Extension(
