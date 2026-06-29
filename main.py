@@ -230,7 +230,15 @@ async def serve_ui():
 async def process_document(files: List[UploadFile] = File(...)):
     results_summary = []
 
+    ALLOWED_EXTENSIONS = {'.png', '.jpg', '.jpeg', '.webp', '.bmp', '.tiff', '.tif'}
+
     for file in files:
+        _, ext = os.path.splitext(file.filename.lower())
+
+        if ext not in ALLOWED_EXTENSIONS:
+            print(f"[INFO] File di-skip (Bukan format gambar yang didukung): {file.filename}")
+            continue
+        
         start_time = time.time()
         
         contents = await file.read()
