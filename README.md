@@ -138,13 +138,13 @@ docker build -t smart_scanner .
 docker run -p 8080:8080 smart_scanner
 ```
 
-Access the Web Dashboard at http://localhost:8080/
+Access the Web Dashboard at http://127.0.0.1:8080/
 
 ## 🧪 Testing & REST API Usage
 
 ### Automated Batch Testing (Browser Interface)
 
-1. Open http://localhost:8080/ in your browser.
+1. Open [http://127.0.0.1:8080/](http://127.0.0.1:8080/) in your browser.
 2. Under "2. Batch / Folder Upload", click "Choose Files" and select an entire local directory containing test images.
 3. Click "Scan Batch Folder".
 4. The API will process all images sequentially and output a comprehensive metadata summary.
@@ -153,12 +153,13 @@ Access the Web Dashboard at http://localhost:8080/
 ### CLI REST Integration (Single-image curl)
 
 ```bash
-curl -X POST http://localhost:8080/process \
+curl -X POST http://127.0.0.1:8080/process \
   -F "files=@/path/to/business_card.jpg"
 ```
 
 ### JSON Response Schema (Successful Case)
 
+```json
 {
     "status": "success",
     "total_processed": 1,
@@ -183,7 +184,7 @@ curl -X POST http://localhost:8080/process \
 ```
 
 ### JSON Response Schema (No Card Detected Case)
-
+```json
 {
     "file_original_name": "blurry_wall.jpg",
     "document_detected": false,
