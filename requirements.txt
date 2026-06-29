@@ -1,0 +1,24 @@
+# --- Kebutuhan Utama OCR ---
+paddlepaddle==2.6.2
+paddleocr==2.7.0.3
+
+# --- Pengolah Gambar & Matriks (Versi Stabil) ---
+numpy==1.23.5
+opencv-python==4.6.0.66
+imutils==0.5.4
+matplotlib==3.7.1
+
+# --- NLP & Parsing ---
+spacy==3.7.4
+
+# --- API & Web Deployment ---
+fastapi==0.109.2
+uvicorn==0.27.1
+python-multipart==0.0.9
+
+# --- C++ Integration ---
+pybind11==2.11.1
+setuptools
+
+# --- Utility ---
+python-dotenv==1.0.1
