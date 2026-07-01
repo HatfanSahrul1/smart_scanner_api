@@ -2,6 +2,8 @@
 
 A high-performance, containerized hybrid microservice built for detecting, preprocessing, enhancing, and extracting structured information from business cards and documents. This system demonstrates a robust industrial design by coupling the speed of native C++ (OpenCV) for compute-bound pixel processing with the flexibility of Python (FastAPI, PaddleOCR, SpaCy) for high-level orchestration, deep learning inference, and Natural Language Processing.
 
+## Live Demo : [smartscannerapi-production.up.railway.app](https://smartscannerapi-production.up.railway.app/)
+
 ## 🚀 Key Features
 
 - **Dynamic Image Enhancement:** Real-time illumination correction leveraging HSV colorspace analysis and Contrast Limited Adaptive Histogram Equalization (CLAHE).
